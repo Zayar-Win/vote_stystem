@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apline style */
+
+[x-cloak] {
+    display: none !important;
+}
+
+.boder-blue-transparent {
+    border-image-source: linear-gradient(
+        to bottom,
+        rgba(50, 138, 241, 0.22),
+        rgba(99, 123, 255, 0)
+    );
+    border-image-slice: 1;
+    background-image: linear-gradient(to bottom, #ffffff, #ffffff),
+        linear-gradient(
+            to bottom,
+            rgba(50, 138, 241, 0.22),
+            rgba(99, 123, 255, 0)
+        );
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.comments-container::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: theme("colors.gray.400");
+}
+
+.comment::before {
+    position: absolute;
+    content: "";
+    top: 40px;
+    left: -48px;
+    width: 15px;
+    height: 2px;
+    background-color: theme("colors.gray.400");
+}
+
+.comment:last-child::after {
+    position: absolute;
+    content: "";
+    top: 42px;
+    left: -48px;
+    width: 3px;
+    height: 100%;
+    background-color: #f7f8fc;
+}
+
+.admin::before {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    left: -66px;
+    z-index: 3;
+    border: 7px solid white;
+    box-shadow: 4px 4px 15px 0 rgba(36, 37, 38, 0.08);
+    background: theme("colors.own-purple");
+}
